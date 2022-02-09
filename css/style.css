@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+:root {
+	--header-outer-height: 110px;
+	--header-inner-height: 70px;
+	--header-height-difference: calc(
+		var(--header-outer-height) - var(--header-inner-height)
+	);
+	
+}
+
+body {
+    margin: 0;
+	font-family: "DM Sans", sans-serif;
+	background-color: #f2f5f7;
+	line-height: 1.5;
+	min-height: 300vh;
+	position: relative;
+    background:  url(../images/bg.jpg);
+    
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+}
+
+.responsive-wrapper {
+	width: 90%;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* "липкая шапка" */
+.header-outer {
+	/* прилепляем её */
+	height: var(--header-outer-height);
+	position: sticky;
+	top: calc(
+		var(--header-height-difference) * -1
+	); /* умножаем на -1, будет отрицательным */
+	display: flex;
+	align-items: center;
+    z-index: 1;
+
+	/* остальное */
+	background-color: rgba(44, 47, 68, 0.4);
+	box-shadow: 0 2px 10px 0 rgba(0,0,0, 0.1);
+}
+
+.header-inner {
+	/* делаем его "липким" */
+	height: var(--header-inner-height);
+	position: sticky;
+	top: 0;
+
+	/* остальное */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    
+}
+
+/* Стили остальных элементов */
+.header-logo img {
+	display: block;
+	height: calc(var(--header-inner-height) + 30px);
+    margin-top: 5px;
+    
+}
+
+.header-navigation {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header-navigation a,
+.header-navigation button {
+	font-size: 25px;
+	color: white;
+	margin-left: 1.75rem;
+	position: relative;
+	font-weight: 500;
+}
+.header-navigation a {
+	display: none;
+	text-decoration: none;
+}
+
+.np{
+	padding-left: 33px;
+}
+.np ::before {
+	
+	position: absolute;
+	content: ""; 
+	left: 0px;
+	top: 5px;
+ 
+	width: 25px;
+    height: 28px;
+	background: url('../images/ll.png');
+	background-size: 25px 28px;
+}
+
+
+.header-navigation button {
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+}
+
+.header-navigation a:hover:after,
+.header-navigation button:hover:after {
+	transform: scalex(1);
+	background-color: white;
+}
+
+.header-navigation a:after,
+.header-navigation button:after {
+	transition: 0.25s ease;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: transparent;
+	transform: scalex(0);
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+}
+
+.main {
+	margin-top: 3rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: transparent;
+}
+.mainimage {
+  
+min-height: 100vh;
+background-color: transparent;
+position:relative;
+text-align: center;
+}
+
+.maintext{
+    color: rgba(255, 255, 255,.9);
+	
+    min-width: 100vw;  
+    font-size: 400%;
+    padding-right: 20px;
+	text-shadow: 1px 1px 2px black, 0 0 1em rgba(44, 47, 68, 0.9);
+   position: absolute;               
+   top: 30%;                         
+   transform: translate(0, -30%) }
+
+
+.maintext :last-child :hover {
+	background:rgb(92, 3, 24);
+	transition: 0.25s ease;
+	
+
+}
+.maintext a {
+	text-decoration:none ;
+	padding: 15px 30px;
+	color: white;
+	font-size: 20px;
+	background:rgb(152,1,36);
+	border-radius: 30px;
+	
+}
+
+
+.widget {
+	width: 100%;
+	max-width: 360px;
+	
+	
+	
+	margin: 5px;
+	
+    
+}
+
+.widget > * + * {
+	margin-top: 1.25em;
+}
+
+
+
+
+
+@media (min-width: 800px) {
+	.header-navigation a {
+		display: inline-block;
+
+	}
+
+	.header-navigation button {
+		display: none;
+	}
+}
+
+
+
+
+
+
+.product-item {
+	
+	margin: 0 auto;
+	background: white;
+	overflow: hidden;
+	transition: .4s linear;
+ }
+ .product-img {
+	transition: 1s ease-in-out;
+ }
+ .product-img:hover {
+	transform: scale(1.1);
+ }
+ .product-img img {
+	display: block;
+	width: 100%;
+ }
+ .product-list {
+	padding: 10px 10px 5px 10px;
+	margin-top: 15px;
+ }
+ .product-list h3 {
+	font-weight: 700;
+	color: #39404B;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 2;
+	max-width: 50%;
+ }
+ .price {
+	color: #E34D38;
+	display: block;
+	margin-bottom: 12px;
+ }
+ 
+ .actions {
+	
+	padding-top: 4px;
+	font-size: 13px;
+	height: 30px;
+	line-height: 30px;
+ }
+ .actions:after {
+	content: "";
+	display: table;
+	clear: both;
+ }
+ .add-to-cart {
+	 width: 100%;
+	
+ }
+ .submenu {
+	visibility: hidden;
+	opacity: 0;
+	
+	 
+	 line-height: 12px;
+	 height: 100px;
+	
+	 transition : .4s linear;
+	 float: right;
+	 margin-top: -100px;
+	
+	 
+ }
+ .cart-button {
+	border-top: 1px solid #eee;
+	padding-top: 10px;
+	text-decoration: none;
+	color: #8C877C;
+	transition: .4s linear;
+ }
+ .add-to-cart:hover .submenu {
+	visibility: visible;
+	opacity: 1;
+	}
+ 
+ .add-to-cart:hover .cart-button {
+	color: #E34D38;
+ }
+ 
+
+
+
+
+
+ .footer__content{
+	background-color: #595959;
+	padding: 20px 0px 30px;
+  }
+  .footer__inner{
+	display: flex;
+	justify-content: space-between;
+  }
+  .footer__inner .header__btn{
+	float: none;
+	display: inline-block;
+  }
+  .footer__map{
+	padding-top: 10px;
+	max-width: 630px;
+	width: 100%;
+  }
+  .footer__map iframe{
+	width: 100%;
+  }
+  .footer__title{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #fff;
+	line-height: 36px;
+	letter-spacing: 0.5px;
+  }
+  .footer__text{
+	color: #d3d2d2;
+	margin-bottom: 20px;
+  }
+  .footer__info{
+	max-width: 360px;
+  }
+  .footer__list{
+	padding-top: 10px;
+  }
+  .footer__list li{
+	margin-top: 10px;
+  }
+  .footer__list a{
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.25px;
+	color: #fff;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	padding-left: 33px;
+	position: relative;
+  }
+  .footer__list a:before{
+	content: '\f003';
+	position: absolute;
+	left: 0;
+	color: #ffc222;
+	font-family: 'icomoon';
+  }
+  .footer__list .footer__phone:before{
+	content: "\f095";
+	left: 3px;
+  }
+  .footer__list .footer__adress:before{
+	content: "\f041";
+	left: 3px;
+  }
+  .footer__copy{
+	background-color: #303030;
+	text-align: center;
+	font-size: 12px;
+	line-height: 24px;
+	padding: 8px 0;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+  }
