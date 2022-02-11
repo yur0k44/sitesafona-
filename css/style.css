@@ -22,11 +22,7 @@ body {
 	line-height: 1.5;
 	min-height: 300vh;
 	position: relative;
-    background:  url(../images/bg.jpg);
-    
-background-position: center center;
-background-size: cover;
-background-attachment: fixed;
+   
 }
 
 
@@ -144,9 +140,15 @@ header {
     background-color: transparent;
 }
 .mainimage {
-  
+	top: calc(
+		var(--header-outer-height) * -1
+	);
 min-height: 100vh;
-background-color: transparent;
+background:  url(../images/bg.jpg);
+    
+background-position: center center;
+background-size: cover;
+
 position:relative;
 text-align: center;
 }
@@ -159,7 +161,7 @@ text-align: center;
     padding-right: 20px;
 	text-shadow: 1px 1px 2px black, 0 0 1em rgba(44, 47, 68, 0.9);
    position: absolute;               
-   top: 30%;                         
+   top: 40%;                         
    transform: translate(0, -30%) }
 
 
