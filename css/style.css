@@ -214,6 +214,7 @@ text-align: center;
 	.header-logo img {
 		
 		height: calc(var(--header-inner-height) + 30px);
+	}
 }
 
 
