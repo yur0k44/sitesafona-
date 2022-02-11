@@ -155,7 +155,7 @@ text-align: center;
     color: rgba(255, 255, 255,.9);
 	line-height: 1;
     min-width: 100vw;  
-    font-size: 400%;
+    font-size: 300%;
     padding-right: 20px;
 	text-shadow: 1px 1px 2px black, 0 0 1em rgba(44, 47, 68, 0.9);
    position: absolute;               
@@ -215,6 +215,11 @@ text-align: center;
 	.header-logo img {
 		
 		height: calc(var(--header-inner-height) + 30px);
+	}
+
+	.maintext{
+		
+		font-size: 400%;
 	}
 }
 
