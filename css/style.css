@@ -29,15 +29,10 @@ background-size: cover;
 background-attachment: fixed;
 }
 
-.responsive-wrapper {
-	width: 90%;
-	max-width: 1280px;
-	margin-left: auto;
-	margin-right: auto;
-}
+
 
 /* "липкая шапка" */
-.header-outer {
+header {
 	/* прилепляем её */
 	height: var(--header-outer-height);
 	position: sticky;
@@ -54,6 +49,12 @@ background-attachment: fixed;
 }
 
 .header-inner {
+
+	width: 90%;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+
 	/* делаем его "липким" */
 	height: var(--header-inner-height);
 	position: sticky;
@@ -314,6 +315,10 @@ text-align: center;
 	padding: 20px 0px 30px;
   }
   .footer__inner{
+	width: 90%;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	justify-content: space-between;
   }
@@ -360,21 +365,7 @@ text-align: center;
 	padding-left: 33px;
 	position: relative;
   }
-  .footer__list a:before{
-	content: '\f003';
-	position: absolute;
-	left: 0;
-	color: #ffc222;
-	font-family: 'icomoon';
-  }
-  .footer__list .footer__phone:before{
-	content: "\f095";
-	left: 3px;
-  }
-  .footer__list .footer__adress:before{
-	content: "\f041";
-	left: 3px;
-  }
+  
   .footer__copy{
 	background-color: #303030;
 	text-align: center;
