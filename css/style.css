@@ -69,7 +69,7 @@ background-attachment: fixed;
 /* Стили остальных элементов */
 .header-logo img {
 	display: block;
-	height: calc(var(--header-inner-height) + 30px);
+	height: calc(var(--header-inner-height) + 10px);
     margin-top: 5px;
     
 }
@@ -210,6 +210,10 @@ text-align: center;
 	.maintext{
 	line-height: 2;	
 	}
+
+	.header-logo img {
+		
+		height: calc(var(--header-inner-height) + 30px);
 }
 
 
