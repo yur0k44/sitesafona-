@@ -6,14 +6,6 @@
 	box-sizing: border-box;
 }
 
-:root {
-	--header-outer-height: 110px;
-	--header-inner-height: 70px;
-	--header-height-difference: calc(
-		var(--header-outer-height) - var(--header-inner-height)
-	);
-	
-}
 
 body {
     margin: 0;
@@ -30,29 +22,26 @@ body {
 /* "липкая шапка" */
 header {
 	/* прилепляем её */
-	height: var(--header-outer-height);
+	height: 110px;
 	position: sticky;
-	top: calc(
-		var(--header-height-difference) * -1
-	); /* умножаем на -1, будет отрицательным */
+	top: -40px;
+
 	display: flex;
 	align-items: center;
     z-index: 1;
-
 	/* остальное */
 	background-color: rgba(44, 47, 68, 0.4);
 	box-shadow: 0 2px 10px 0 rgba(0,0,0, 0.1);
 }
 
 .header-inner {
-
-	width: 90%;
-	max-width: 1280px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left:  10px;
+	margin-right: 20px;
+	width: 100%;
+	
 
 	/* делаем его "липким" */
-	height: var(--header-inner-height);
+	height: 70px;
 	position: sticky;
 	top: 0;
 
@@ -66,7 +55,7 @@ header {
 /* Стили остальных элементов */
 .header-logo img {
 	display: block;
-	height: calc(var(--header-inner-height) + 10px);
+	height: 80px;
     margin-top: 5px;
     
 }
@@ -131,34 +120,37 @@ header {
 	bottom: 0px;
 	left: 0;
 }
+.mainimage {
+	top: -110px;
+	min-height: 100vh;
+	background:  url(../images/bg.jpg);
+    
+	background-position: center center;
+	background-size: cover;
 
+	position:relative;
+	text-align: center;
+}
+
+main{
+	text-align: center;
+	width: 100%;
+}
 .main {
-	margin-top: 3rem;
-    display: inline-flex;
+	text-align: left;
+	display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: transparent;
-}
-.mainimage {
-	top: calc(
-		var(--header-outer-height) * -1
-	);
-min-height: 100vh;
-background:  url(../images/bg.jpg);
-    
-background-position: center center;
-background-size: cover;
-
-position:relative;
-text-align: center;
-}
+	max-width: 1200px;
+	}
 
 .maintext{
     color: rgba(255, 255, 255,.9);
 	line-height: 1;
     min-width: 100vw;  
     font-size: 300%;
-    padding-right: 20px;
+    padding-right: 10px;
 	text-shadow: 1px 1px 2px black, 0 0 1em rgba(44, 47, 68, 0.9);
    position: absolute;               
    top: 40%;                         
@@ -185,20 +177,12 @@ text-align: center;
 .widget {
 	width: 100%;
 	max-width: 360px;
-	
-	
-	
 	margin: 5px;
-	
-    
-}
+	}
 
 .widget > * + * {
 	margin-top: 1.25em;
 }
-
-
-
 
 
 @media (min-width: 800px) {
@@ -216,7 +200,7 @@ text-align: center;
 
 	.header-logo img {
 		
-		height: calc(var(--header-inner-height) + 30px);
+		height: 95px;
 	}
 
 	.maintext{
@@ -224,10 +208,6 @@ text-align: center;
 		font-size: 400%;
 	}
 }
-
-
-
-
 
 
 .product-item {
@@ -315,13 +295,13 @@ text-align: center;
 
 
 
-
-
- .footer__content{
+footer{
 	background-color: #595959;
+	
+   }
+
+   .footer{
 	padding: 20px 0px 30px;
-  }
-  .footer__inner{
 	width: 90%;
 	max-width: 1280px;
 	margin-left: auto;
@@ -329,11 +309,7 @@ text-align: center;
 	display: flex;
 	justify-content: space-between;
   }
-  .footer__inner .header__btn{
-	float: none;
-	display: inline-block;
-  }
-  .footer__map{
+   .footer__map{
 	padding-top: 10px;
 	max-width: 630px;
 	width: 100%;
@@ -341,35 +317,23 @@ text-align: center;
   .footer__map iframe{
 	width: 100%;
   }
-  .footer__title{
-	font-family: 'Roboto', sans-serif;
+  .footer__text{
 	font-weight: 500;
 	font-size: 16px;
 	color: #fff;
-	line-height: 36px;
+	line-height: 30px;
 	letter-spacing: 0.5px;
-  }
-  .footer__text{
-	color: #d3d2d2;
 	margin-bottom: 20px;
-  }
-  .footer__info{
 	max-width: 360px;
   }
-  .footer__list{
-	padding-top: 10px;
-  }
-  .footer__list li{
-	margin-top: 10px;
-  }
-  .footer__list a{
+  .footer__text a{
+
+	text-decoration: none;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 20px;
 	letter-spacing: 0.25px;
 	color: #fff;
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
-	padding-left: 33px;
 	position: relative;
   }
   
