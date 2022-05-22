@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded',function() {
             formPreview.innerHTML ='';
             form.reset();
             form.classList.remove('_sending');// убираем класс в сss отправка пошла ! 
-        } else { alert ("Ошибка") ;// если что то не так
+        } else { alert ("Ошибка js") ;// если что то не так
         form.classList.remove('_sending');}// убираем класс в сss отправка пошла ! 
 
 

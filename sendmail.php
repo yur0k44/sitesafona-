@@ -33,7 +33,7 @@ if (trim(!empty($_POST['email']))){
   $body.= '<p><strong>E-Mail:</strong>'.$_POST['email'].'</p>';}
 
 if (trim(!empty($_POST['phone']))){
- $body.= '<p><strong>Рука:</strong>'.$hand.'</p>';}  
+ $body.= '<p><strong>Телефон:</strong>'.$hand.'</p>';}  
 
  if (trim(!empty($_POST['age']))){
   $body.= '<p><strong>Возраст:</strong>'.$_POST['age'].'</p>';}
@@ -67,7 +67,7 @@ $mail->addAttachment('phpmailer.jpg');      // прикрепляем второ
 if ($mail->send()) {
   $message = 'Письмо отправлено!';
 } else {
-  $message = 'Ошибка: ' ;
+  $message = 'Ошибка php: ' ;
 }
 
 $response = ['message'=> $message];
