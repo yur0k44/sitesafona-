@@ -32,7 +32,7 @@ if (trim(!empty($_POST['name']))){// проверяем заполнено ли 
 if (trim(!empty($_POST['email']))){
   $body.= '<p><strong>E-Mail:</strong>'.$_POST['email'].'</p>';}
 
-if (trim(!empty($_POST['hand']))){
+if (trim(!empty($_POST['phone']))){
  $body.= '<p><strong>Рука:</strong>'.$hand.'</p>';}  
 
  if (trim(!empty($_POST['age']))){
