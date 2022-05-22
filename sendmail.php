@@ -33,7 +33,7 @@ if (trim(!empty($_POST['email']))){
   $body.= '<p><strong>E-Mail:</strong>'.$_POST['email'].'</p>';}
 
 if (trim(!empty($_POST['phone']))){
- $body.= '<p><strong>Телефон:</strong>'.$hand.'</p>';}  
+ $body.= '<p><strong>Телефон:</strong>'.$_POST['phone'].'</p>';}
 
  if (trim(!empty($_POST['age']))){
   $body.= '<p><strong>Возраст:</strong>'.$_POST['age'].'</p>';}
@@ -44,10 +44,11 @@ if (trim(!empty($_POST['message']))){
 
   //Прикреплённый файл 
   if (!empty($_FILES['image']['tmp_name'])){ //если картика есть 
-    if (copy($_FILES['image']['tmp_name'],$filePath)){ // копируем её в переменную пач и если всё ок 
+    $filePath = $_FILES['image']['tmp_name'];
+    
       $body.= '<p><strong>Фото в приложении:</strong>';
       $mail->addAttachment('$filePath');// прикрепляем один файл пач в письмо
-     }
+     
     
   
   }
@@ -65,9 +66,9 @@ $mail->addAttachment('phpmailer.jpg');      // прикрепляем второ
 
 // Отправляем
 if ($mail->send()) {
-  $message = 'Письмо отправлено!';
+  $message = 'Ошибка php:';
 } else {
-  $message = 'Ошибка php: ' ;
+  $message = 'отправлено ' ;
 }
 
 $response = ['message'=> $message];
