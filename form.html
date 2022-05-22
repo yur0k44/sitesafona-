@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправка сообщения</title>
+  <link rel="shortcut icon" href="img/ico.png" type="image/png">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapperr">
+        <div class="form">
+            <form action="#" id="form" class=form__body>
+                <h1 class="form__title">Отправка данных на почту</h1>
+                <div class="form__item">
+                    <label for="formName" class="form__label">Имя*</label>
+                    <input id="formName" type="text" name="name" class="form__input _req">
+                </div>
+
+                <div class="form__item">
+                    <label for="formEmail" class="form__label">Email*</label>
+                    <input id="formEmail" type="text" name="email" class="form__input _req _email">
+                </div>
+
+                <div class="form__item">
+                    <label for="formPhone" class="form__label">Телефон*</label>
+                    <input id="formPhone" type="text" name="phone" class="form__input _req _phone">
+                </div>
+
+
+                <div class="form__item">
+                    <label for="formMessage" class="form__label">Сообщение:</label>
+                    <textarea name="message" id="formMessage" class="form__input"></textarea>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__label">Вы:</div>
+                    <select name="age" class="select">
+                        <option value="физического лица" selected="">Физическое лицо</option>
+                        <option value="ИП">Индивидуальный  предприниматель</option>
+                        <option value="представителя организации">Организация</option>
+                    </select>
+
+                </div>
+                <div class="form__item">
+                    <div class="form__label">прикрепить фото</div>
+                    <div class="file">
+                        <div class="file__item">
+                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image"
+                                class="file__input">
+                            <div class="file__button">Выбрать</div>
+                        </div>
+                        <div id = "formPreview" class="File__preview"></div>
+                    </div>
+                </div>
+                <button type="submit" class="form__button">отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
